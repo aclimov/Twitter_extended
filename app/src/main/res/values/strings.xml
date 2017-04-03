@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TwitterClientR3</string>
+    <string name="login_label">Connect to Twitter</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="user_following">FOLLOWING</string>
+    <string name="user_followers">FOLLOWERS</string>
+
+</resources>

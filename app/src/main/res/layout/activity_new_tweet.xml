@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.codepath.apps.TwitterClientR3.activities.NewTweetActivity">
+
+    <LinearLayout
+        android:id="@+id/llFirstRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBody"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:paddingTop="7dp"
+        android:weightSum="10">
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingLeft="7dp"
+            android:paddingTop="7dp"
+            app:srcCompat="@drawable/cancel"
+            android:scaleType="center"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/ivProfileImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="15"
+            android:paddingLeft="7dp"
+            android:paddingTop="7dp"/>
+
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/etBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llFirstRow"
+        android:hint="What's happening?"
+        android:inputType="textMultiLine"
+        android:maxLength="140"
+        android:textSize="24sp"
+        android:gravity="top|left"
+        android:layout_above="@+id/button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/colorPrimary"
+        android:text="Tweet"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="140"
+        android:textStyle="bold"
+        android:paddingRight="10dp"
+        android:layout_alignBaseline="@+id/button"
+        android:layout_alignBottom="@+id/button"
+        android:layout_toLeftOf="@+id/button"
+        android:layout_toStartOf="@+id/button" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:srcCompat="@drawable/photo_camera"
+        android:layout_marginLeft="33dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginBottom="7dp"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>

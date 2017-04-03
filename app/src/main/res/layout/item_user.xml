@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_tweet_border"
+    android:orientation="vertical"
+    android:paddingBottom="20dp">
+
+    <RelativeLayout
+        android:id="@+id/llLeftColumn"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvRetweeted"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivProfileImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="7dp"
+            android:paddingTop="7dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/llRightColumn"
+        android:layout_alignTop="@+id/llLeftColumn"
+        android:layout_toEndOf="@+id/llLeftColumn"
+        android:layout_toRightOf="@+id/llLeftColumn"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/tvDisplayName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="Ryan Hoover"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tvDisplayName"
+            android:layout_toEndOf="@+id/tvDisplayName"
+            android:layout_toRightOf="@+id/tvDisplayName"
+            android:paddingLeft="5dp"
+            android:text="ClimovAlex"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDisplayName"
+            android:paddingTop="7dp"
+            android:text="Test tweet this is for sure"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            android:autoLink="all"
+            android:linksClickable="true"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

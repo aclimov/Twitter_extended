@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@color/colorWhite">
+
+    <ImageView
+        android:id="@+id/ivUserBackImage"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/tback" />
+
+    <ImageView
+        android:id="@+id/ivProfileImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/ivUserBackImage"
+        android:layout_marginTop="-25dp"
+        android:adjustViewBounds="true"
+        android:paddingLeft="7dp"
+        android:paddingTop="7dp"
+         />
+
+    <RelativeLayout
+        android:id="@+id/llRightColumn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ivProfileImage"
+        android:layout_marginTop="25dp"
+        android:layout_toEndOf="@+id/ivProfileImage"
+        android:layout_toRightOf="@+id/ivProfileImage"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/tvDisplayName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="Ryan Hoover"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tvDisplayName"
+            android:layout_toEndOf="@+id/tvDisplayName"
+            android:layout_toRightOf="@+id/tvDisplayName"
+            android:paddingLeft="5dp"
+            android:text="ClimovAlex"
+            android:textSize="14sp" />
+
+        <com.codepath.apps.TwitterClientR3.helpers.LinkifiedTextView
+            android:id="@+id/tvDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDisplayName"
+            android:autoLink="all"
+            android:linksClickable="true"
+            android:paddingTop="7dp"
+            android:text="Test tweet this is for sure"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDescription"
+            android:orientation="horizontal"
+            android:paddingTop="7dp"
+            android:weightSum="20">
+
+            <TextView
+                android:id="@+id/tvFollowing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="14dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:text="142343" />
+
+            <TextView
+                android:id="@+id/tvFollowingStr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:paddingLeft="7dp"
+                android:text="@string/user_following" />
+
+            <TextView
+                android:id="@+id/tvFollowers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:paddingLeft="34dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:text="234234" />
+
+            <TextView
+                android:id="@+id/tvFollowersStr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:paddingLeft="7dp"
+                android:text="@string/user_followers" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
